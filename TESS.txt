@@ -1,0 +1,27 @@
+Task yg akan dikerjakan jika berhasil tarik data dari tabel ACDOCA:
+Jika tabel ACDOCA menjadi tabel referensi utama sbg pengganti bsis bsas:
+a. Apakah logic utk mendapatkan angkanya sama dgn bsis/bsas?
+b. Apa perlu merubah seluruh job source mart financial dari bsis/bsas ke acdoca? dan fieldnya apa aja yg ditarik sesuai dgn tabel BSIS/BSAS?
+jika iya (merubah job lainnya):
+1. membuat query testing pembentuk data mart
+2. cek dgn data pembanding. jika sudah sama semua, lanjut merubah ETLnya
+3. cek datamart hasil etl. jika sama, ready go live
+jika tidak harus merubah job lain:
+1. membuat query testing pembentuk datamart arus kas
+2. cek dgn data pembanding. jika sudah sama semua, lanjut merubah ETLnya
+3. cek datamart hasil etl. jika sama, ready go live utk arus kas
+
+Jika tabel ACDOCA hanya diambil key yg ga ada di bsis/bsas saja (PRCTR) dan field joinnya:
+a. Perlu tau field joinnya by apa. jika sudah:
+1. ubah query pembentuk mart arus kas, join tabel acdoca utk mengambil referensi profit center
+2. cek dgn data pembanding. jika sudah sama semua, lanjut merubah ETLnya
+3. cek datamart hasil etl. jika sama, ready go live utk arus kas
+
+ini pak . mohon koreksi
+
+   BATAM
+   5010102001  TUNJ JABATAN
+   EXCEL					SAP
+   JAN 502,079,000 			546,029,000
+   FEB 492,140,000 			536,090,000
+   MAR 551,909,000 			594,109,000
